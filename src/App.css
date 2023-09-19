@@ -1,0 +1,97 @@
+/* App.css */
+
+/* Container styles */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+.container-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 800px; /* Adjust the width as needed */
+  margin: 0 auto;
+}
+
+/* Drag container styles */
+.drag-container {
+  width: 200px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.drag-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #3498db;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Form container styles */
+.form-container {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow-y: scroll;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+/* Field label styles */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Input styles */
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Checkbox styles */
+input[type="checkbox"] {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Remove button styles */
+button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect for Remove button */
+button:hover {
+  background-color: #c0392b;
+}
+/* Add this to your CSS stylesheet */
+.drag-item.selected {
+  background-color: #f39c12;
+  border: 2px solid #e67e22;
+  color: #fff;
+}
