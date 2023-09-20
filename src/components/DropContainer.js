@@ -34,6 +34,17 @@ const DropContainer = ({ formFields, handleDrop, handleRemoveField }) => {
                   <label>Date:</label>
                   <input type="date" />
                 </div>
+              ) : field === "Number" ? (
+                <div>
+                  <label>Phone Number:</label>
+                  <input type="tel"
+                    placeholder="Phone Number"
+                    onInput={(e) => {
+                      const phoneNumber = e.target.value.replace(/[^0-9]/g, "");
+                      e.target.value=phoneNumber;
+                    }}
+                  />
+                </div>
               ) : null}
               <button onClick={() => handleRemoveField(index)}>Remove</button>
             </div>

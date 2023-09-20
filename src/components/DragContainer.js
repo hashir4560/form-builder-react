@@ -36,6 +36,12 @@ const DragContainer = ({ handleSelectItem, selectedItem }) => {
       >
         Date field
       </div>
+      <div
+      className={`drag-item ${selectedItem==='Phone Number'?'selected':''}`}
+      draggable
+      onDragStart={(event)=>handleDragStart(event,'Number')}>
+       Phone Number
+      </div>
     </div>
   );
 };

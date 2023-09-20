@@ -62,11 +62,19 @@ label {
 
 /* Input styles */
 input[type="text"],
-input[type="date"] {
+input[type="date"]
+ {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+input[type="tel"]{
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
 }
 
 /* Checkbox styles */
@@ -104,7 +112,8 @@ button:hover {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 600px; /* Adjust the width as needed */
+  width: 600px;
+ /* Adjust the width as needed */
 }
 
 /* Form builder title styles */
@@ -121,6 +130,7 @@ button:hover {
   border-radius: 5px;
   padding: 20px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  height: 600px; ;
 }
 
 /* Form field styles */
@@ -188,8 +198,6 @@ button:hover {
   max-height: 400px; /* Adjust the maximum height as needed */
   overflow-y: auto; /* Add vertical scrolling when content overflows */
 }
-/* Updated CSS for the submit button and its container */
-/* ... Your existing CSS rules ... */
 
 /* Styles for the submit button container */
 .submit-button-container {
@@ -204,7 +212,7 @@ button:hover {
   background-color: blue; /* Blue color for the button */
   color: white;
   border: none;
-  padding: 10px 20px; /* Adjust the padding to make the button smaller */
+  padding: 8px 11px; /* Adjust the padding to make the button smaller */
   border-radius: 5px;
   cursor: pointer;
 }
@@ -214,4 +222,4 @@ button:hover {
   background-color: darkblue; /* Change to a darker blue color on hover */
 }
 
-/* ... Your existing CSS rules ... */
+
