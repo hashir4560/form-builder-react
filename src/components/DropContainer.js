@@ -1,6 +1,46 @@
-import React from "react";
 
-const DropContainer = ({ formFields, handleDrop, handleRemoveField }) => {
+import React from "react";
+import { toast } from 'react-toastify'; // Import toast from react-toastify
+import  { useState } from "react";
+
+
+
+const DropContainer = ({formFields, handleDrop, handleRemoveField,handleSubmit }) => {
+  const [formError, setFormError] = useState(false);
+  const handleFormSubmit = () => {
+    if (formFields.length === 0) {
+      // If formFields is empty, show an error toast
+      toast.error('Form cannot be submitted with empty fields', {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 3000,
+      });
+      setFormError(true);
+    } else {
+      // Form is not empty, proceed with submission
+      setFormError(false);
+      handleSubmit();
+      // Clear the form fields if needed
+      // setFormFields([]);
+    }
+  };
+  
+
+  // const handleFormSubmit = () => {
+  //   if (formFields.length === 0) {
+  //     // If formFields is empty, show an error toast
+  //     toast.error('Form cannot be submitted with empty fields', {
+  //       position: toast.POSITION.TOP_CENTER,
+  //       autoClose: 3000,
+  //     });
+  //     setFormError(true);
+  //   } else {
+  //     // Form is not empty, proceed with submission
+  //     setFormError(false);
+  //     handleSubmit();
+  //     setFormFields([]);
+
+  //   }
+  // };
   return (
     <div className="form-builder-container">
       <h2>Form Builder</h2>
@@ -52,7 +92,7 @@ const DropContainer = ({ formFields, handleDrop, handleRemoveField }) => {
         </div>
 
         <div className="submit-button-container">
-          <button className="submit-button" type="submit">
+          <button className="submit-button" type="button" onClick={handleFormSubmit}>
             Submit
           </button>
         </div>

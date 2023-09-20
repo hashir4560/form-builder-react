@@ -194,9 +194,8 @@ button:hover {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
-  /* You can set a maximum height for the form builder to control scrolling */
-  max-height: 400px; /* Adjust the maximum height as needed */
-  overflow-y: auto; /* Add vertical scrolling when content overflows */
+  max-height: 400px; 
+  overflow-y: auto;
 }
 
 /* Styles for the submit button container */
@@ -212,7 +211,7 @@ button:hover {
   background-color: blue; /* Blue color for the button */
   color: white;
   border: none;
-  padding: 8px 11px; /* Adjust the padding to make the button smaller */
+  padding: 8px 11px; 
   border-radius: 5px;
   cursor: pointer;
 }

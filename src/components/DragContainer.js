@@ -8,6 +8,7 @@ const DragContainer = ({ handleSelectItem, selectedItem }) => {
 
   return (
     <div className="drag-container">
+      <h2>Elements</h2>
       <div
         className={`drag-item ${selectedItem === 'Name' ? 'selected' : ''}`}
         draggable
@@ -37,11 +38,12 @@ const DragContainer = ({ handleSelectItem, selectedItem }) => {
         Date field
       </div>
       <div
-      className={`drag-item ${selectedItem==='Phone Number'?'selected':''}`}
+      className={`drag-item ${selectedItem==='phonenumber'?'selected':''}`}
       draggable
       onDragStart={(event)=>handleDragStart(event,'Number')}>
-       Phone Number
-      </div>
+       phoneNumber
+      </div >
+      
     </div>
   );
 };

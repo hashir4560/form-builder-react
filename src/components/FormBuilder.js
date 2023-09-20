@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import DragContainer from './DragContainer';
 import DropContainer from './DropContainer';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const FormBuilder = () => {
   const [formFields, setFormFields] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
+  //This function is called when an item is dropped into the drop area.
 
   const handleDrop = (event) => {
     event.preventDefault();
@@ -13,6 +17,7 @@ const FormBuilder = () => {
       setSelectedItem(null); // Reset selected item after adding it to formFields
     }
   };
+  
 
   const handleRemoveField = (index) => {
     const updatedFormFields = [...formFields];
@@ -23,6 +28,14 @@ const FormBuilder = () => {
   const handleSelectItem = (item) => {
     setSelectedItem(item);
   };
+  const handleSubmit = () => {
+    
+    toast.success('Form Submitted!', {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 2000,
+    });
+    setFormFields([]);
+  };
 
   return (
     <div className="App">
@@ -31,8 +44,12 @@ const FormBuilder = () => {
         formFields={formFields}
         handleDrop={handleDrop}
         handleRemoveField={handleRemoveField}
+        handleSubmit={handleSubmit}
+        setFormFields={setFormFields}
       />
+       
     </div>
+
   );
 };
 
