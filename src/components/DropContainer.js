@@ -24,23 +24,6 @@ const DropContainer = ({formFields, handleDrop, handleRemoveField,handleSubmit }
     }
   };
   
-
-  // const handleFormSubmit = () => {
-  //   if (formFields.length === 0) {
-  //     // If formFields is empty, show an error toast
-  //     toast.error('Form cannot be submitted with empty fields', {
-  //       position: toast.POSITION.TOP_CENTER,
-  //       autoClose: 3000,
-  //     });
-  //     setFormError(true);
-  //   } else {
-  //     // Form is not empty, proceed with submission
-  //     setFormError(false);
-  //     handleSubmit();
-  //     setFormFields([]);
-
-  //   }
-  // };
   return (
     <div className="form-builder-container">
       <h2>Form Builder</h2>
