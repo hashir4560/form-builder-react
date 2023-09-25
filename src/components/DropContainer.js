@@ -12,7 +12,7 @@ const DropContainer = ({formFields, handleDrop, handleRemoveField,handleSubmit }
       // If formFields is empty, show an error toast
       toast.error('Form cannot be submitted with empty fields', {
         position: toast.POSITION.TOP_CENTER,
-        autoClose: 3000,
+        autoClose: 2000,
       });
       setFormError(true);
     } else {
@@ -38,7 +38,8 @@ const DropContainer = ({formFields, handleDrop, handleRemoveField,handleSubmit }
               {field === "Name" ? (
                 <div>
                   <label>Name:</label>
-                  <input type="text" placeholder="Name" />
+                  <input 
+                  type="text" placeholder="Name" />
                 </div>
               ) : field === "Input" ? (
                 <div>
@@ -54,13 +55,17 @@ const DropContainer = ({formFields, handleDrop, handleRemoveField,handleSubmit }
                 </div>
               ) : field === "Date" ? (
                 <div>
-                  <label>Date:</label>
-                  <input type="date" />
+                  <label  htmlFor={`dateInput${index}`}>Date:</label>
+                  <input 
+                  id={`dateInput${index}`}
+                  type="date" />
                 </div>
               ) : field === "Number" ? (
                 <div>
-                  <label>Phone Number:</label>
-                  <input type="tel"
+                  <label htmlFor="phoneNumberInput">Phone Number</label>
+                  <input 
+                  id="phoneNumberInput"
+                  type="tel"
                     placeholder="Phone Number"
                     onInput={(e) => {
                       const phoneNumber = e.target.value.replace(/[^0-9]/g, "");
